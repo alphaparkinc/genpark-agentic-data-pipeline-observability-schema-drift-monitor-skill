@@ -1,0 +1,35 @@
+{
+  "name": "genpark-agentic-data-pipeline-observability-schema-drift-monitor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Agentic data pipeline observability engine detecting schema drift, null rate spikes, and data quality regressions before agent ingestion.",
+  "author": "genpark",
+  "category": "data",
+  "tags": [
+    "data-observability",
+    "schema-drift",
+    "pipeline-health",
+    "anomaly-detector",
+    "monte-carlo"
+  ],
+  "inputs": {
+    "pipeline_name": {
+      "type": "string"
+    },
+    "table_target": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "pipeline_health_status": {
+      "type": "string"
+    },
+    "anomalies_found": {
+      "type": "array"
+    },
+    "freshness_sla_met": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
